@@ -1,0 +1,884 @@
+# ============================================================================
+# Parking Management System - .gitignore
+# Comprehensive ignore file for Python, Node.js, React, Docker, and more
+# ============================================================================
+
+# ============================================================================
+# OS Generated Files
+# ============================================================================
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Linux
+.directory
+*.pid
+*.seed
+*.pid.lock
+
+# ============================================================================
+# IDE / Editor Files
+# ============================================================================
+
+# VS Code
+.vscode/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# IntelliJ IDEA / PyCharm / WebStorm
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+.idea_modules/
+*.class
+*.jar
+*.war
+*.ear
+target/
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries
+.idea/vcs.xml
+.idea/jsLibraryMappings.xml
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+*.sublime-settings
+.sublime/
+*.sublime-*
+
+# Vim
+*.vim
+*.vimrc
+*.swp
+*.swo
+*~
+.*.swp
+.*.swo
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Atom
+.atom/
+*.atom
+.nuclide/
+.npmrc
+
+# ============================================================================
+# Python Files
+# ============================================================================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.pyd
+*.dll
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+pip-wheel-metadata/
+share/python-wheels/
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+*.pytest_cache/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+*.pytype
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+docs/_static/
+docs/_templates/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+*.ipynb
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+pipenv.pipfile
+
+# celery beat schedule file
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+pythonenv*
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# ============================================================================
+# Node.js / JavaScript / TypeScript Files
+# ============================================================================
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Dependency directories
+node_modules/
+jspm_packages/
+.bower_components/
+.pnp/
+.pnp.js
+.pnp.*
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# TypeScript
+*.tsbuildinfo
+*.ts.map
+*.js.map
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variable files
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+
+# parcel-bundler cache
+.cache
+.parcel-cache
+
+# Next.js build output
+.next
+out/
+
+# Nuxt.js build / generate output
+.nuxt
+dist
+
+# Gatsby files
+.cache/
+public
+
+# Storybook build output
+storybook-static
+
+# rollup.js default build output
+dist/
+
+# Typescript v1 declaration files
+typings/
+
+# Optional prettier cache
+.prettiercache
+
+# Optional stylelint cache
+.stylelintcache
+
+# ESLint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variables file
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+
+# parcel-bundler cache
+.cache
+.parcel-cache
+
+# Next.js build output
+.next
+out/
+
+# Nuxt.js build / generate output
+.nuxt
+dist
+
+# Gatsby files
+.cache/
+public
+
+# Storybook build output
+storybook-static
+
+# rollup.js default build output
+dist/
+
+# Typescript v1 declaration files
+typings/
+
+# Optional prettier cache
+.prettiercache
+
+# ============================================================================
+# React / Frontend Specific
+# ============================================================================
+
+# React build
+/build
+/dist
+/out
+
+# React Native
+*.apk
+*.aab
+*.ipa
+*.xcodeproj
+*.xcworkspace
+Pods/
+*.xcuserstate
+*.xcuserdata
+*.xcscheme
+*.xccheckout
+*.moved-aside
+*.xcuserdatad
+*.xcworkspacedata
+DerivedData
+*.hmap
+*.ipa
+*.xcassets
+*.appiconset
+*.launchimage
+*.storyboard
+*.xib
+*.plist
+*.entitlements
+*.mobileprovision
+*.app
+*.dSYM.zip
+*.dSYM
+*.xcarchive
+
+# Expo
+.expo/
+dist/
+web-build/
+
+# ============================================================================
+# Docker / Container Files
+# ============================================================================
+
+# Docker
+docker-compose.override.yml
+docker-compose.*.yml
+.Dockerfile
+docker/
+*.dockerignore
+.dockerignore
+docker-compose.dev.yml
+docker-compose.local.yml
+
+# Docker volumes
+volumes/
+data/
+*.pid
+
+# Kubernetes
+*.kubeconfig
+*.kubeconfig.*
+*.kubeconfig.local
+*.kubeconfig.backup
+*.kubeconfig.bak
+kubeconfig
+kubeconfig.*
+.helm/
+charts/*.tgz
+*.lock
+*.lock.*
+*.lock.json
+
+# ============================================================================
+# Database Files
+# ============================================================================
+
+# PostgreSQL
+*.sql
+*.sqlite
+*.sqlite3
+*.db
+*.db.*
+*.db-journal
+*.db-wal
+*.db-shm
+*.pgsql
+*.pgsql.*
+*.pgsql.gz
+*.pgdump
+*.pgdump.gz
+*.backup
+*.backup.*
+*.bak
+*.bak.*
+*.dump
+*.dump.*
+
+# MongoDB
+*.bson
+*.json.gz
+*.mongodump
+*.mongorestore
+dump/
+*.wt
+*.wt.*
+*.wiredtiger
+*.wiredtiger.*
+mongod.lock
+storage.bson
+*.ns
+*.0
+*.1
+*.2
+*.3
+*.4
+*.5
+*.6
+*.7
+*.8
+*.9
+
+# Redis
+*.rdb
+*.aof
+*.appendonly
+*.dump.rdb
+*.redis
+*.redis.*
+*.redis.aof
+*.redis.rdb
+dump.rdb
+appendonly.aof
+
+# ============================================================================
+# Backup Files
+# ============================================================================
+
+# Backup directories
+backup/
+backups/
+*.backup
+*.backup.*
+*.bak
+*.bak.*
+*.old
+*.orig
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# Database backups
+*.sql.gz
+*.sql.bz2
+*.sql.zip
+*.dump.gz
+*.dump.bz2
+*.dump.zip
+*.pgdump.gz
+*.pgdump.bz2
+*.pgdump.zip
+
+# ============================================================================
+# Logs and Temporary Files
+# ============================================================================
+
+# Logs
+logs/
+*.log
+*.log.*
+log/
+log/*.log
+*.pid
+*.pid.*
+*.lock
+*.tmp
+*.temp
+*.cache
+*.cached
+*.cached.*
+*.cache.*
+*.cache-lock
+*.cache-lock.*
+
+# ============================================================================
+# Secrets and Credentials
+# ============================================================================
+
+# Secrets
+*.secret
+*.secrets
+*.key
+*.keys
+*.pem
+*.crt
+*.cert
+*.cer
+*.der
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.truststore
+*.gpg
+*.asc
+*.sig
+*.signature
+*.encrypted
+*.enc
+*.crypt
+*.crypto
+*.pgp
+*.ssh
+*.id_rsa
+*.id_dsa
+*.id_ecdsa
+*.id_ed25519
+*.known_hosts
+*.authorized_keys
+*.config
+*.credentials
+*.cred
+*.auth
+*.token
+*.tokens
+*.jwt
+*.jws
+*.jwe
+*.secret.*
+
+# Env files
+.env
+.env.*
+!.env.example
+!.env.template
+!.env.sample
+!.env.local.example
+!.env.development.example
+!.env.production.example
+!.env.test.example
+!.env.staging.example
+
+# API Keys
+api_key
+api_keys
+*.api_key
+*.api_keys
+*.apikey
+*.apikeys
+
+# ============================================================================
+# Build and Distribution Artifacts
+# ============================================================================
+
+# Build outputs
+build/
+dist/
+out/
+target/
+bin/
+obj/
+release/
+debug/
+publish/
+*.exe
+*.dll
+*.so
+*.dylib
+*.a
+*.o
+*.obj
+*.lib
+*.pyc
+*.pyo
+*.pyd
+
+# Package manager files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+composer.lock
+Gemfile.lock
+Cargo.lock
+go.sum
+poetry.lock
+Pipfile.lock
+requirements.txt
+requirements-dev.txt
+requirements-test.txt
+requirements-prod.txt
+dev-requirements.txt
+test-requirements.txt
+prod-requirements.txt
+
+# ============================================================================
+# IDE Configuration Files
+# ============================================================================
+
+# Visual Studio
+.vs/
+*.sln
+*.suo
+*.user
+*.userosscache
+*.vsp
+*.vspx
+*.pdb
+*.ilk
+*.idb
+*.ipdb
+*.iobj
+*.ipdb
+*.vspscc
+*.vssscc
+*.vsmdi
+*.testsettings
+*.runsettings
+*.psess
+*.coverage
+*.testrunconfig
+*.trx
+*.vstest
+*.testsettings
+*.runsettings
+
+# Visual Studio Code
+.vscode/
+.vscode-test/
+*.code-workspace
+
+# ============================================================================
+# Terraform
+# ============================================================================
+
+# Local .terraform directories
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+*.tfvars
+*.tfvars.json
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+
+# ============================================================================
+# Ansible
+# ============================================================================
+
+*.retry
+*.log
+*.tmp
+*.temp
+inventory.ini
+hosts.ini
+vault.yml
+vault.yaml
+*.vault
+*.vault.*
+*.secret.*
+
+# ============================================================================
+# Misc
+# ============================================================================
+
+# Archives
+*.7z
+*.rar
+*.tar
+*.gz
+*.bz2
+*.xz
+*.zip
+*.cab
+*.iso
+*.dmg
+*.pkg
+*.deb
+*.rpm
+
+# Media files (large files)
+*.mp4
+*.avi
+*.mov
+*.wmv
+*.flv
+*.mkv
+*.m4v
+*.mpg
+*.mpeg
+*.3gp
+*.webm
+*.ogv
+*.mp3
+*.wav
+*.aac
+*.flac
+*.ogg
+*.wma
+*.m4a
+*.aiff
+*.alac
+
+# Images (large files)
+*.psd
+*.ai
+*.eps
+*.indd
+*.sketch
+*.fig
+*.xd
+*.raw
+*.cr2
+*.nef
+*.arw
+*.dng
+*.orf
+*.rw2
+*.pef
+*.srw
+*.x3f
+*.erf
+*.mrw
+*.mef
+*.nrw
+*.raf
+*.r3d
+*.kdc
+*.dcr
+*.k25
+*.mos
+*.fff
+
+# ============================================================================
+# Project Specific
+# ============================================================================
+
+# Parking Management System specific
+parking-management-system/
+*.parking
+*.parking.*
+*.parking.db
+*.parking.sqlite
+*.parking.sqlite3
+
+# Reports
+coverage/
+htmlcov/
+.coverage
+.coverage.*
+*.coverage
+*.coverage.*
+.pytest_cache/
+.tox/
+.nox/
+*.cover
+*.py,cover
+*.xml
+*.json
+*.html
+*.pdf
+*.docx
+*.xlsx
+*.pptx
+*.csv
+*.tsv
+*.xls
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+*.tmp.*
+*.temp.*
+*.cache
+*.cached
+
+# ============================================================================
+# End of .gitignore
+# ============================================================================
