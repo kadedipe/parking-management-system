@@ -1,39 +1,28 @@
 // ============================================================================
-// useVehicle Hook
+// useVehicles Hook
 // ============================================================================
 
 import { useState, useCallback } from 'react';
-import { vehicleService } from '../services/vehicle.service';
+import { vehiclesService } from '../services/vehicles.service';
 
-export const useVehicle = () => {
+export const useVehicles = () => {
+  const [vehicles, setVehicles] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const [data, setData] = useState(null);
+  const [total, setTotal] = useState(0);
+  const [stats, setStats] = useState(null);
 
-  const createVehicle = useCallback(async (vehicleData) => {
+  const fetchVehicles = useCallback(async (params = {}) => {
     try {
       setLoading(true);
       setError(null);
-      const response = await vehicleService.create(vehicleData);
-      setData(response);
+      const response = await vehiclesService.getVehicles(params);
+      setVehicles(response.items || []);
+      setTotal(response.total || 0);
+      setStats(response.stats || null);
       return response;
     } catch (err) {
-      setError(err.message || 'Failed to create vehicle');
-      throw err;
-    } finally {
-      setLoading(false);
-    }
-  }, []);
-
-  const updateVehicle = useCallback(async (id, vehicleData) => {
-    try {
-      setLoading(true);
-      setError(null);
-      const response = await vehicleService.update(id, vehicleData);
-      setData(response);
-      return response;
-    } catch (err) {
-      setError(err.message || 'Failed to update vehicle');
+      setError(err.message || 'Failed to fetch vehicles');
       throw err;
     } finally {
       setLoading(false);
@@ -44,10 +33,38 @@ export const useVehicle = () => {
     try {
       setLoading(true);
       setError(null);
-      const response = await vehicleService.getById(id);
+      const response = await vehiclesService.getVehicle(id);
       return response;
     } catch (err) {
       setError(err.message || 'Failed to get vehicle');
+      throw err;
+    } finally {
+      setLoading(false);
+    }
+  }, []);
+
+  const createVehicle = useCallback(async (data) => {
+    try {
+      setLoading(true);
+      setError(null);
+      const response = await vehiclesService.createVehicle(data);
+      return response;
+    } catch (err) {
+      setError(err.message || 'Failed to create vehicle');
+      throw err;
+    } finally {
+      setLoading(false);
+    }
+  }, []);
+
+  const updateVehicle = useCallback(async (id, data) => {
+    try {
+      setLoading(true);
+      setError(null);
+      const response = await vehiclesService.updateVehicle(id, data);
+      return response;
+    } catch (err) {
+      setError(err.message || 'Failed to update vehicle');
       throw err;
     } finally {
       setLoading(false);
@@ -58,7 +75,7 @@ export const useVehicle = () => {
     try {
       setLoading(true);
       setError(null);
-      const response = await vehicleService.delete(id);
+      const response = await vehiclesService.deleteVehicle(id);
       return response;
     } catch (err) {
       setError(err.message || 'Failed to delete vehicle');
@@ -68,14 +85,14 @@ export const useVehicle = () => {
     }
   }, []);
 
-  const validatePlate = useCallback(async (plate) => {
+  const exportVehicles = useCallback(async (format) => {
     try {
       setLoading(true);
       setError(null);
-      const response = await vehicleService.validatePlate(plate);
+      const response = await vehiclesService.exportVehicles(format);
       return response;
     } catch (err) {
-      setError(err.message || 'Failed to validate plate');
+      setError(err.message || 'Failed to export vehicles');
       throw err;
     } finally {
       setLoading(false);
@@ -83,15 +100,18 @@ export const useVehicle = () => {
   }, []);
 
   return {
+    vehicles,
     loading,
     error,
-    data,
+    total,
+    stats,
+    fetchVehicles,
+    getVehicle,
     createVehicle,
     updateVehicle,
-    getVehicle,
     deleteVehicle,
-    validatePlate,
+    exportVehicles,
   };
 };
 
-export default useVehicle;
+export default useVehicles;

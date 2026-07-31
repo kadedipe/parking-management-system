@@ -1,34 +1,45 @@
 // ============================================================================
-// Booking Service
+// Bookings Service
 // ============================================================================
 
 import api from './api';
 
-export const bookingService = {
-  create: async (data) => {
-    const response = await api.post('/bookings', data);
+export const bookingsService = {
+  getBookings: async (params) => {
+    const response = await api.get('/bookings', { params });
     return response.data;
   },
 
-  getById: async (id) => {
+  getBooking: async (id) => {
     const response = await api.get(`/bookings/${id}`);
     return response.data;
   },
 
-  cancel: async (id) => {
-    const response = await api.post(`/bookings/${id}/cancel`);
+  cancelBooking: async (id, reason) => {
+    const response = await api.post(`/bookings/${id}/cancel`, { reason });
     return response.data;
   },
 
-  getHistory: async (params) => {
-    const response = await api.get('/bookings/history', { params });
+  rebookBooking: async (id) => {
+    const response = await api.post(`/bookings/${id}/rebook`);
     return response.data;
   },
 
-  getUpcoming: async () => {
-    const response = await api.get('/bookings/upcoming');
-    return response.data;
+  exportBookings: async (format) => {
+    const response = await api.get('/bookings/export', { 
+      params: { format },
+      responseType: 'blob',
+    });
+    // Trigger download
+    const url = window.URL.createObjectURL(new Blob([response.data]));
+    const link = document.createElement('a');
+    link.href = url;
+    link.setAttribute('download', `bookings.${format}`);
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    return response;
   },
 };
 
-export default bookingService;
+export default bookingsService;
