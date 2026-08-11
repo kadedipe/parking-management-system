@@ -1,0 +1,75 @@
+# ============================================================================
+# Production Requirements - Minimal Production Dependencies
+# ============================================================================
+
+# parking-management-system/services/notification-service/requirements.prod.txt
+
+# Core Framework
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-dotenv==1.0.0
+pydantic==2.5.0
+pydantic-settings==2.1.0
+
+# Database
+sqlalchemy==2.0.23
+alembic==1.12.1
+asyncpg==0.29.0
+psycopg2-binary==2.9.9
+
+# Redis
+redis==5.0.1
+aioredis==2.0.1
+cachetools==5.3.1
+hiredis==2.3.2
+
+# Message Queue
+celery==5.3.4
+kombu==5.3.4
+
+# Authentication
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+bcrypt==4.1.1
+pyjwt==2.8.0
+cryptography==41.0.7
+python-multipart==0.0.6
+email-validator==2.1.0
+
+# Email Services
+sendgrid==6.10.0
+aiosmtplib==2.0.2
+tenacity==8.2.3
+
+# Push Notifications
+expo-server-sdk==3.7.0
+firebase-admin==6.4.0
+
+# SMS Services
+twilio==8.9.0
+
+# Template Engine
+jinja2==3.1.2
+markdown==3.5.1
+
+# HTTP Client
+httpx==0.25.2
+aiohttp==3.9.1
+
+# Logging
+loguru==0.7.2
+prometheus-client==0.19.0
+
+# Utils
+python-dateutil==2.8.2
+pytz==2023.3
+shortuuid==1.0.11
+tenacity==8.2.3
+phonenumbers==8.13.27
+
+# Security
+slowapi==0.1.9
+
+# API Documentation
+fastapi-pagination==0.12.11
+fastapi-cache[redis]==0.2.1
