@@ -98,6 +98,40 @@ API key management
 
 Audit logging
 
+# @parking-system/ui-components
+
+Shared UI Components for the Parking Management System
+
+[![npm version](https://badge.fury.io/js/@parking-system%2Fui-components.svg)](https://badge.fury.io/js/@parking-system%2Fui-components)
+[![CI](https://github.com/parkingapp/parking-system/actions/workflows/ci.yml/badge.svg)](https://github.com/parkingapp/parking-system/actions/workflows/ci.yml)
+[![codecov](https://codecov.io/gh/parkingapp/parking-system/branch/main/graph/badge.svg)](https://codecov.io/gh/parkingapp/parking-system)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+
+## Installation
+
+```bash
+npm install @parking-system/ui-components
+# or
+yarn add @parking-system/ui-components
+
+# @parking-system/utils
+
+Shared Utilities for the Parking Management System
+
+[![npm version](https://badge.fury.io/js/@parking-system%2Futils.svg)](https://badge.fury.io/js/@parking-system%2Futils)
+[![CI](https://github.com/parkingapp/parking-system/actions/workflows/ci.yml/badge.svg)](https://github.com/parkingapp/parking-system/actions/workflows/ci.yml)
+[![codecov](https://codecov.io/gh/parkingapp/parking-system/branch/main/graph/badge.svg)](https://codecov.io/gh/parkingapp/parking-system)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+
+## Installation
+
+```bash
+npm install @parking-system/utils
+# or
+yarn add @parking-system/utils
+
 🌐 Real-time Features
 WebSocket connections for live updates
 
